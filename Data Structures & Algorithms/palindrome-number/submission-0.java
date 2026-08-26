@@ -1,0 +1,18 @@
+class Solution {
+    public boolean isPalindrome(int x) {
+        if (x < 0) 
+            return false;;
+        
+        int reverse = 0;
+        int shortX = x;
+        while (shortX > 0) {
+            reverse = reverse * 10 + shortX%10;
+            shortX = shortX / 10;
+        }
+
+        if (x == reverse) 
+            return true;
+        
+        return false;
+    }
+}
